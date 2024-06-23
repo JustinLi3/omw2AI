@@ -50,6 +50,31 @@ random_int = np.random.randint(1, 15, size=(5, 3))
 normal_sam = np.random.normal(15,5, size = (5,3)) 
 
 #Permutation 
-permuted = np.random.permutation(A)
+permuted = np.random.permutation(A) 
 
-print(permuted)
+#Practical Examples: Deriving Patterns from Data 
+
+#Lets create a large dataset with a mean of 50 and standard deviation of 15 
+data = np.random.normal(50,15, size = (5,10))  
+mean = np.mean(data) 
+sd = np.std(data) 
+min = np.min(data)
+max = np.max(data) 
+
+print(f"Mean: {mean}\nStandard Deviation: {sd}\nMin Val: {min}\nMax Val: {max}") 
+
+#Patterns: Identifying samples within one standard deviation of the mean 
+test = np.sum((data>(mean-sd))&(data<(mean+sd))) 
+percentage_within_one_std = (test / len(data))
+
+print(f"Percentage of samples within one standard deviation from the mean: {percentage_within_one_std}%") 
+
+#Summary 
+
+#NumPy arrays are efficient for numerical operations 
+#Vectorization allows us to perform operations on the entire array without explicit loops
+#Linear algebra operations (matrix multiplication, transposition, and inversion) are supported with NumPy 
+# and help to identify patterns within data which is useful for ML  
+#Random sampling for generating datasets and simulations
+
+
