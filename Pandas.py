@@ -84,3 +84,7 @@ print(merged_df)
 #Data Cleaning and Preprocessing to ensure quality data (handling missing values, filtering, transforming) 
 #Data Aggregation and Grouping to summarize data and extract meaningful insights by grouping similar data 
 
+#DEEPER UNDERSTANDING OF THE GROUPBY 
+#   - A way to split data into separate "groups" based on values 
+#   - Essentially first groups a column and then you can decide what to do with it (counting, summing, averaging)
+#   - So for each column, group sorts them alphabetically and then puts another column based on what you want
