@@ -42,16 +42,15 @@ plt.scatter(meanMuscleGain,df["Resistance_Training_Hours_per_week"].unique(),col
 plt.legend()
 
 plt.grid(True, linestyle='--', alpha=0.7) 
+statHours = {}
+for hour in range(1,5):
+    statHours[hour]= np.array(df[df['Resistance_Training_Hours_per_week']==hour]['Muscle_Mass_Change_in_8_weeks'].to_list())
+for hour,values in statHours.items():
+    print(f"Clinical Trial for those who worked out for {hour} hour/s had a mean of +{values.mean():2f}kgs") 
 plt.show() 
 
 
-meanList = np.array(m) 
 
-#Return min, max, mean for each 
-#Conclusion 
-#Hypothesis testing 
-
-meanList.
     
 
 
